@@ -1,11 +1,8 @@
-
 import Image from "next/image";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
-
-
       <main>
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center">
@@ -14,30 +11,30 @@ export default function Home() {
               src="https://i.imgur.com/vW8Ju8b.jpg"
               alt="Professional Auto Service"
               fill
-              className="object-contain  brightness-[0.2] w-full h-full"
+              className="object-cover brightness-[0.2] w-full h-full"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-br from-black via-transparent to-red-900/30 " />
+            <div className="absolute inset-0 bg-gradient-to-br from-black via-transparent to-red-900/30" />
           </div>
 
-          <div className="relative max-w-7xl mx-auto px-8 py-32">
-            <div className="max-w-3xl space-y-10">
-              <h1 className="text-7xl font-black leading-tight">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
+            <div className="max-w-3xl space-y-6 sm:space-y-8 lg:space-y-10">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-black leading-tight">
                 Expert Care for
                 <span className="block text-red-600">
                   Your Vehicle
                 </span>
               </h1>
-              <p className="text-xl text-gray-300 leading-relaxed">
+              <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
                 Professional automotive service with state-of-the-art diagnostics and certified technicians for all makes and models.
               </p>
-              <div className="flex flex-wrap gap-6">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
                 <a href="#services" 
-                   className="group relative px-8 py-4 bg-red-600 text-white font-bold rounded-full overflow-hidden hover:bg-red-700 transition-colors">
+                   className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-red-600 text-white font-bold rounded-full text-center overflow-hidden hover:bg-red-700 transition-colors">
                   Our Services
                 </a>
                 <a href="#contact" 
-                   className="px-8 py-4 border-2 border-red-600 rounded-full font-bold hover:bg-red-600 hover:text-white transition-all">
+                   className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-red-600 rounded-full font-bold text-center hover:bg-red-600 hover:text-white transition-all">
                   Schedule Service
                 </a>
               </div>
@@ -46,12 +43,12 @@ export default function Home() {
         </section>
 
         {/* Featured Services */}
-        <section className="py-32 bg-zinc-950">
-          <div className="max-w-7xl mx-auto px-8">
-            <div className="flex justify-between items-end mb-16">
+        <section className="py-16 sm:py-24 lg:py-32 bg-zinc-950">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-8 sm:mb-16">
               <div>
                 <h4 className="text-red-500 font-semibold mb-2">Our Services</h4>
-                <h2 className="text-4xl font-bold">Expert Solutions</h2>
+                <h2 className="text-3xl sm:text-4xl font-bold">Expert Solutions</h2>
               </div>
               <a href="#services" className="group flex items-center gap-2 text-red-500">
                 View All Services
@@ -59,10 +56,10 @@ export default function Home() {
               </a>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {["Diagnostics", "Repairs", "Maintenance"].map((service, i) => (
                 <div key={i} className="group relative bg-black border border-red-900/30 rounded-2xl overflow-hidden">
-                  <div className="relative h-64 overflow-hidden">
+                  <div className="relative h-48 sm:h-64 overflow-hidden">
                     <Image
                       src={`/service-${i + 1}.jpg`}
                       alt={service}
@@ -71,12 +68,12 @@ export default function Home() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   </div>
-                  <div className="p-8">
-                    <h3 className="text-xl font-bold mb-2">{service}</h3>
+                  <div className="p-6 sm:p-8">
+                    <h3 className="text-lg sm:text-xl font-bold mb-2">{service}</h3>
                     <p className="text-gray-400 mb-6">Professional {service.toLowerCase()} services by certified technicians</p>
-                    <div className="flex justify-between items-center">
-                      <span className="text-lg font-bold text-red-500">From $89</span>
-                      <button className="px-6 py-3 bg-red-600 text-white rounded-full text-sm font-semibold hover:bg-red-700 transition-colors">
+                    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+                      <span className="text-base sm:text-lg font-bold text-red-500">From $89</span>
+                      <button className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-3 bg-red-600 text-white rounded-full text-sm font-semibold hover:bg-red-700 transition-colors">
                         Learn More
                       </button>
                     </div>
@@ -90,9 +87,9 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-red-900/30">
-        <div className="max-w-7xl mx-auto px-8 py-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-            <div className="col-span-2 md:col-span-1">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+            <div className="col-span-1 sm:col-span-2 lg:col-span-1">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center">
                   <span className="text-lg font-black text-white">CM</span>
