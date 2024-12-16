@@ -16,7 +16,7 @@ const AboutPage = () => {
             About Our Auto Service
           </h1>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            With over 20 years of experience, we've built our reputation on quality service, expert knowledge, and customer satisfaction.
+            With over 20 years of experience, we&apos;ve built our reputation on quality service, expert knowledge, and customer satisfaction.
           </p>
         </motion.div>
 
@@ -43,7 +43,7 @@ const AboutPage = () => {
           >
             <h2 className="text-3xl font-semibold">Our Story</h2>
             <p className="text-gray-300">
-              Founded in 2003, our auto service center has grown from a small local garage to a full-service automotive facility. We've maintained our commitment to personalized service while expanding our capabilities to serve more customers with the latest automotive technology.
+              Founded in 2003, our auto service center has grown from a small local garage to a full-service automotive facility. We&apos;ve maintained our commitment to personalized service while expanding our capabilities to serve more customers with the latest automotive technology.
             </p>
             <p className="text-gray-300">
               Our team of certified technicians brings decades of combined experience and a passion for automotive excellence to every job we undertake.
